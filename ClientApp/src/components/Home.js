@@ -6,8 +6,8 @@ export class Home extends Component {
   render () {
     return (
       <div>
-        <h1>Hello, world!</h1>
-          
+        <h1>Timeboxing With Pomodore</h1>
+
       </div>
     );
   }
