@@ -1,2 +1,1 @@
-# my-new-app
- Timeboxing Pomodore
+#  Timeboxing Pomodore
