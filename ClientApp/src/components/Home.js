@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
+import Pomodoro from "./pomodoro"
 
 export class Home extends Component {
   static displayName = Home.name;
@@ -21,9 +22,7 @@ export class Home extends Component {
               <input type="radio" name="options" id="option3" autocomplete="off" /> Long Break
             </label>
           </div>
-
-          <h1>00:00</h1>
-          <h5>Time to focus!</h5>
+          <Pomodoro />
           <button type="button" class="btn btn-primary btn-lg">Start</button>
         </div>
         <Formik
