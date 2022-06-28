@@ -6,8 +6,26 @@ export class Home extends Component {
 
   render() {
     return (
-      <div class="container shadow-lg p-3 mb-5 bg-white rounded col-10">
-        <h2>Pomodore Timebox</h2>
+      <div class="container shadow-lg p-3 mb-5 bg-white rounded col-10 justify-content-center">
+        <div class="col text-center shadow-sm p-3 mb-5 text-white rounded bg-danger">
+          <h2>Pomodore Timebox</h2>
+
+          <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-outline-light active">
+              <input type="radio" name="options" id="option1" autocomplete="off" checked /> Pomodoro
+            </label>
+            <label class="btn btn-outline-light">
+              <input type="radio" name="options" id="option2" autocomplete="off" /> Short Break
+            </label>
+            <label class="btn btn-outline-light">
+              <input type="radio" name="options" id="option3" autocomplete="off" /> Long Break
+            </label>
+          </div>
+
+          <h1>00:00</h1>
+          <h5>Time to focus!</h5>
+          <button type="button" class="btn btn-primary btn-lg">Start</button>
+        </div>
         <Formik
           initialValues={{ goal1: '', goal2: '', goal3: '' }}
           validate={values => {
@@ -27,14 +45,14 @@ export class Home extends Component {
                 <div class="col form-group p-5">
                   <div class="row pb-3">
                     <label class="form-label">Top Priorities</label>
-                    <Field type="text" name="goal1" class="form-control mb-1" />
-                    <Field type="text" name="goal2" class="form-control mb-1" />
-                    <Field type="text" name="goal3" class="form-control mb-1" />
+                    <Field type="text" name="goal1" class="form-control mb-1" autocomplete="off" />
+                    <Field type="text" name="goal2" class="form-control mb-1" autocomplete="off" />
+                    <Field type="text" name="goal3" class="form-control mb-1" autocomplete="off" />
                   </div>
 
                   <div class="row pb-3">
                     <label class="form-label">Braindump</label>
-                    <Field as="textarea" name="braindump" class="form-control" rows="11" />
+                    <Field as="textarea" name="braindump" class="form-control" rows="13" />
                   </div>
                 </div>
 
@@ -130,15 +148,21 @@ export class Home extends Component {
                       <Field type="text" name="timebox21" class="form-control mb-1" />
                       <Field type="text" name="timebox22" class="form-control mb-1" />
                     </div>
-
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="">05</span>
+                      </div>
+                      <Field type="text" name="timebox23" class="form-control mb-1" />
+                      <Field type="text" name="timebox24" class="form-control mb-1" />
+                    </div>
 
                   </div>
                 </div>
               </div>
 
-              <button type="submit" disabled={isSubmitting} class="btn, btn-primary">
+              {/* <button type="submit" disabled={isSubmitting} class="btn, btn-primary">
                 Submit
-              </button>
+              </button> */}
             </Form>
           )}
         </Formik>
