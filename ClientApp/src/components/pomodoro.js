@@ -9,10 +9,11 @@ export default function Pomodoro() {
     const [mode, setMode] = useState("pomodoro-mode")
     const [startTimer, setStartTimer] = useState(false)
     const [pomodoroCounter, setPomodoroCounter] = useState(0)
+    const [buttonText, setButtonText] = useState('Start');
 
-    function handleStartStop() {
+    function handleStartStop(event) {
         setStartTimer(prevStartTimer => !prevStartTimer)
-        console.log(startTimer);
+        setButtonText(()=> startTimer? "Start": "Pause");
     }
 
     function handleTimerTab(event) {
@@ -105,7 +106,7 @@ export default function Pomodoro() {
                         {message}
                     </div>
 
-                    <button type="button" class="btn btn-primary btn-lg " onClick={handleStartStop}>Start</button>
+                    <button type="button" class="btn btn-primary btn-lg " onClick={handleStartStop}>{buttonText}</button>
                 </div>
             </div>
         </div>
