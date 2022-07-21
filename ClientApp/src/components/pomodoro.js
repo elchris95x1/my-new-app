@@ -52,7 +52,7 @@ export default function Pomodoro() {
                 }
             }
             autoSwitchMode()
-        }, 10)
+        }, 1000)
         return () => clearInterval(interval);
     })
 
