@@ -27,47 +27,56 @@ export class Home extends Component {
         >
           {({ isSubmitting }) => (
             <Form>
-              <div class="row" >
 
-                <div class="col form-group p-5">
-                  <div class="row pb-3">
-                    <label class="form-label">Top Priorities</label>
-                    <Field type="text" name="goal1" class="form-control mb-1" autocomplete="off" />
-                    <Field type="text" name="goal2" class="form-control mb-1" autocomplete="off" />
-                    <Field type="text" name="goal3" class="form-control mb-1" autocomplete="off" />
+              <div class="container " >
+                <div class="row form-group pb-5">
+                  <div class="col" >
+                    <label class="form-label">Name</label>
+                    <Field type="text" name="fullName" class="form-control" autoomplete="off" />
                   </div>
-
-                  <div class="row pb-3">
-                    <label class="form-label">Braindump</label>
-                    <Field as="textarea" name="braindump" class="form-control" rows="13" />
+                  <div class="col" >
+                    <label class="form-label">Date</label>
+                    <Field type="date" name="date" class="form-control" autocomplete="off" />
                   </div>
                 </div>
 
+                <div class="row form-group">
+                  <div class="col">
+                    <div>
+                      <label class="form-label">Top Priorities</label>
+                      <Field type="text" name="goal1" class="form-control mb-1" autocomplete="off" />
+                      <Field type="text" name="goal2" class="form-control mb-1" autocomplete="off" />
+                      <Field type="text" name="goal3" class="form-control mb-1" autocomplete="off" />
+                    </div>
 
-                <div class="col form-group p-5">
-                  <div class="row ">
-                    <div class=" col-2 px-0 float-right">
-                      <label class="form-label">Hrs</label>
-                    </div>
-                    <div class=" col px-0 float-right">
-                      <label class="form-label">:00</label>
-                    </div>
-                    <div class="col px-0">
-                      <label class="form-label">:30</label>
+                    <div>
+                      <label class="form-label">Braindump</label>
+                      <Field as="textarea" name="braindump" class="form-control mb-1" rows="13" />
                     </div>
                   </div>
-
-                  <div class="row">
-                    <div class="input-group">
-                      <div class="input-group-prepend">
-                        <span class="input-group-text" id="">03</span>
+                  <div class="col form-group">
+                    <div class="row ">
+                      <div class=" col">
+                        <label class="form-label">Hrs</label>
                       </div>
-                      <Field type="text" name="timebox1" class="form-control mb-1" autocomplete="off" />
-                      <Field type="text" name="timebox2" class="form-control mb-1" autocomplete="off" />
+                      <div class=" col">
+                        <label class="form-label">:00</label>
+                      </div>
+                      <div class="col">
+                        <label class="form-label">:30</label>
+                      </div>
+                    </div>
+
+                    <div class="row ">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="">06</span>
+                        </div>
+                        <Field type="text" name="timebox1" class="form-control mb-1" autocomplete="off" />
+                        <Field type="text" name="timebox2" class="form-control mb-1" autocomplete="off" />
+                      </div>
                     </div>
                   </div>
-
-
                 </div>
               </div>
 
